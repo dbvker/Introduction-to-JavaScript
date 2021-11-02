@@ -20,6 +20,12 @@ Do the following:
    HINT: no function required
 */
 
+var votingAge = 18;
+
+if(votingAge >= 18){
+  console.log('Task 1a:', true)
+}
+
 
 
 /*
@@ -32,7 +38,6 @@ Do the following:
 
    HINT: no function required
 */
-
 
 
 
@@ -60,9 +65,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b){
+  return a * b;
 }
+
+console.log('Task 1d:', multiply(2, 5));
 
 
 
@@ -76,10 +83,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age * 7;
 }
 
+console.log('Task 2:', dogYears(25))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -127,7 +135,7 @@ function hungryDog(weight, age){
   }
 }
 
-console.log('task 3', hungryDog(15, 1))
+console.log('task 3:', hungryDog(15, 1))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -151,9 +159,20 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 */
 
 function game(user, computer){
-  /*add your code here*/
+  if(user > computer){
+    return "you win!";
+  }else if(user < computer){
+    return "you lose!";
+  }else if(user === computer){
+    return "it's a tie";
+  }
 }
 
+let random = Math.random() * 1;
+
+console.log("Task 4:", game(0.5, random))
+
+console.log(random);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -167,10 +186,12 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
+function miles(km){
   /*add your code here*/
+  return km / 1.609
 }
 
+console.log('Task 5:', miles(2))
 
 
 //Task 5b - Feet to CM
